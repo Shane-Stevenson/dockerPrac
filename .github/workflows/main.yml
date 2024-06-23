@@ -16,4 +16,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: docker build -t "image1"
+      - run: docker buildx build -t image1 example_1/
