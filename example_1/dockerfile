@@ -11,3 +11,4 @@ WORKDIR /example_1
 ADD start.sh main.py /example_1/
 #CMD chmod 755 start.sh && ./start.sh
 CMD echo bruh
+sjasbf
