@@ -17,7 +17,7 @@ print("hello docker")
 # print(ds['t2m'].data[495][480])
 
 def test():
-    if 1+2 == 2:
+    if 1+1 == 2:
         print("success")
     else:
         print("failure")
