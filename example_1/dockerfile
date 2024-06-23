@@ -1,0 +1,12 @@
+#dockerfile, image, container
+FROM python:3.9
+
+
+#RUN apt-get update && apt-get install -y libeccodes-dev
+#RUN pip install numpy pyproj eccodes-python pygrib metpy
+#RUN pip install cfgrib herbie-data
+
+WORKDIR /example_1
+
+ADD start.sh main.py /example_1/
+CMD chmod 755 start.sh && ./start.sh
