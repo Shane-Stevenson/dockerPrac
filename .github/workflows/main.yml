@@ -17,4 +17,4 @@ jobs:
         run: docker image pull ${{ secrets.DOCKER_USER }}/image1:amd
 
       - name: Mount And Run Tests
-        run: docker run --rm -v ${{ github.workspace }}/example_1 ${{ secrets.DOCKER_USER }}/image1:amd
+        run: docker run -v ${{ github.workspace }}/example_1
