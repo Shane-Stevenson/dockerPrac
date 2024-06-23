@@ -17,7 +17,4 @@ jobs:
         run: docker image pull ${{ secrets.DOCKER_USER }}/image1:amd
 
       - name: Mount And Run Tests
-        run: docker run -v ${{ github.workspace }}/example_1 ${{ secrets.DOCKER_USER }}/image1:amd
-
-      - name: test main
-        run: chmod 755 ${{ github.workspace }}/example_1/main.py && python ${{ github.workspace }}/example_1/main.py
+        run: docker run --mount type=bind, source=${{ github.workspace }}/example_1, target=/example_1 image1:amd
