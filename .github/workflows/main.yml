@@ -5,4 +5,14 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: docker run --rm -v /example_1:/example_1 image1
+     name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+        
+      name: Download Image
+        run: docker image pull ${{ secrets.DOCKER_USER }}/image1:latest
+      
+      name: Mount And Run Tests
+        run: docker run --rm -v /example_1:/example_1 image1
