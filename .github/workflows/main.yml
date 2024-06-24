@@ -14,9 +14,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
       - name: checkout
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
+        uses: actions/checkout@v2
 
       - name: Download Image
         run: docker image pull ${{ secrets.DOCKER_USER }}/image1:amd
