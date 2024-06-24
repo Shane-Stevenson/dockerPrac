@@ -18,5 +18,5 @@ jobs:
 
       - name: Mount And Run Tests
         #run: ls && docker run -v ${{ github.workspace }}/example_1:/example_1 shanestevenson1/image1:amd
-        run: pwd && ls && echo next && cd ${{ github.workspace }} && ls
+        run: pwd && cd .. && ls && echo first && ls && echo next && cd ${{ github.workspace }} && ls
         #run: docker run shanestevenson1/image1:amd
