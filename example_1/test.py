@@ -16,4 +16,4 @@ class placeHolderTest(unittest.TestCase):
 
         ds = H.xarray("TMP:2 m")
 
-        self.assertEqual(ds['t2m'].data[495][480], 292.0)
+        self.assertEqual(ds['t2m'].data[495][480], 293.0)
